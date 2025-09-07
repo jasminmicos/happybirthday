@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD KRIZIAAA</title>
+    <link rel="stylesheet" href="newpage.css" />
+    <style>
+      .scroll-left-transition {
+        animation: scrollLeft 0.5s forwards;
+      }
+
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="fade-in">HAPPY BIRTHDAY,</h1>
+      <h1 class="fade-in delay">KRIZIA</h1>
+      <input type="checkbox" name="switch" id="switch" />
+            <label for="switch" class="switch">
+            <span class="bg"></span>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </label>
+      <input type="checkbox" name="switch" id="switch" style="display:none;" />
+    </div>
+    <script>
+      document.getElementById('switch').addEventListener('change', function() {
+        if (this.checked) {
+          document.body.classList.add('scroll-left-transition');
+          setTimeout(function() {
+            window.location.href = 'fireworks.html'; // Replace 'newfile.html' with the actual path to your new HTML file
+          }, 500); // The timeout should match the duration of the CSS animation
+        }
+      });
+    </script>
+    <script src="js/newpage.js"></script>
+  </body>
+</html>
